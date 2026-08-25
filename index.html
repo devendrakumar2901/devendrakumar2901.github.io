@@ -3,130 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devendra Kumar | Data Analyst Portfolio</title>
+    <title>Devendra Kumar | Data Analyst</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #050505;
+            background-image: radial-gradient(circle at 50% 0%, #111827 0%, #050505 70%);
+            color: #e5e7eb;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        
+        /* Glassmorphism Bento Cards */
+        .bento-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            border-color: rgba(45, 212, 191, 0.4); /* Teal glow */
+            box-shadow: 0 10px 40px -10px rgba(45, 212, 191, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+
+        /* Terminal Cursor */
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 1.2em;
+            background-color: #2dd4bf;
+            vertical-align: middle;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans overflow-x-hidden">
+<body class="min-h-screen p-4 md:p-8 overflow-x-hidden selection:bg-teal-500/30 selection:text-teal-200">
 
-    <!-- Hero Section -->
-    <header class="bg-slate-900 text-white py-24 text-center relative shadow-lg">
-        <div class="relative z-10" data-aos="zoom-in" data-aos-duration="1000">
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
-                Devendra <span class="text-emerald-400">Kumar</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-slate-300 mb-8 font-light tracking-wide">Data & Business Analyst</p>
-            
-            <div class="flex flex-wrap justify-center gap-4 px-4">
-                <a href="https://github.com/devendrakumar2901" target="_blank" class="bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-full font-semibold transition-all hover:-translate-y-1 shadow-lg">GitHub</a>
-                <a href="mailto:dkumar25604@gmail.com" class="bg-slate-700 hover:bg-slate-600 px-8 py-3 rounded-full font-semibold transition-all hover:-translate-y-1 shadow-lg">Email Me</a>
-                <a href="Devendra_2026_IITG.pdf" target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-slate-900 px-8 py-3 rounded-full font-semibold transition-all hover:-translate-y-1 shadow-lg">Resume</a>
-            </div>
-        </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto p-6 mt-12">
+    <div class="max-w-6xl mx-auto space-y-6">
         
-        <!-- Top Row: Profile & Experience -->
-        <div class="grid md:grid-cols-2 gap-8 mb-16">
+        <!-- Top Row: Intro & Fast Facts -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <!-- Profile & Skills -->
-            <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-lg transition-shadow" data-aos="fade-up">
-                <h2 class="text-2xl font-bold border-b-2 border-emerald-500 pb-2 mb-6 inline-block">Profile & Skills</h2>
-                <p class="mb-6 text-slate-700"><strong>IIT Guwahati</strong> | B.Tech in Chemical Science and Technology (2022-2026)</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-md text-sm font-semibold border border-blue-100">Python (Pandas, NumPy)</span>
-                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-md text-sm font-semibold border border-blue-100">SQL (MySQL)</span>
-                    <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-md text-sm font-semibold border border-emerald-100">Power BI</span>
-                    <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-md text-sm font-semibold border border-purple-100">Machine Learning</span>
-                    <span class="bg-amber-50 text-amber-700 px-3 py-1 rounded-md text-sm font-semibold border border-amber-100">A/B Testing</span>
+            <!-- Hero Intro (Spans 2 columns) -->
+            <div class="bento-card md:col-span-2 p-8 md:p-12 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl group-hover:bg-teal-500/20 transition-colors duration-700"></div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-4">
+                    Devendra<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">Kumar.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 font-light mb-8 max-w-lg">
+                    Data & Business Analyst decoding operational chaos into scalable strategies.
+                </p>
+                <div class="inline-block border border-teal-500/30 bg-teal-500/10 text-teal-300 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">
+                    🎓 B.Tech @ IIT Guwahati (2022-2026)
                 </div>
-            </section>
+            </div>
 
-            <!-- Experience -->
-            <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-2 mb-6 inline-block">Experience</h2>
-                <div class="border-l-4 border-blue-500 pl-4">
-                    <h3 class="text-xl font-bold text-slate-800">Business Analyst Intern</h3>
-                    <p class="text-emerald-600 font-semibold mb-3">Pujakaro | May - July 2025</p>
-                    <ul class="space-y-2 text-slate-600 text-sm">
-                        <li>▹ Built scalable reporting tracking customer engagement for 5,000+ records.</li>
-                        <li>▹ Cleaned datasets via SQL/Python to build Power BI dashboards.</li>
-                        <li>▹ Reduced manual reporting by 36% & delivered EDA insights.</li>
-                    </ul>
+            <!-- Sleek Contact/Social Dock (No Chips) -->
+            <div class="bento-card p-8 flex flex-col justify-center items-center text-center">
+                <h3 class="mono text-sm text-gray-500 mb-6 uppercase tracking-widest">Connect & Download</h3>
+                <div class="grid grid-cols-2 gap-4 w-full">
+                    <a href="https://github.com/devendrakumar2901" target="_blank" class="p-4 rounded-2xl bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all flex flex-col items-center gap-2 group">
+                        <svg class="w-8 h-8 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-3.975-1.385-.09-.225-.48-1.385-.825-1.665-.27-.225-.66-.57-.015-.585.615-.015 1.05.57 1.185.795.69 1.215 1.83 .87 2.28.66.075-.51.285-.87.51-1.065-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.3.255.57.735.57 1.485 0 1.065-.015 1.92-.015 2.19 0 .315.225.69.825.57C20.565 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <span class="text-xs font-semibold">GitHub</span>
+                    </a>
+                    <a href="#" target="_blank" class="p-4 rounded-2xl bg-white/5 hover:bg-white/10 text-gray-400 hover:text-blue-400 transition-all flex flex-col items-center gap-2 group">
+                        <svg class="w-8 h-8 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <span class="text-xs font-semibold">LinkedIn</span>
+                    </a>
+                    <a href="mailto:dkumar25604@gmail.com" class="p-4 rounded-2xl bg-white/5 hover:bg-white/10 text-gray-400 hover:text-rose-400 transition-all flex flex-col items-center gap-2 group">
+                        <svg class="w-8 h-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        <span class="text-xs font-semibold">Email</span>
+                    </a>
+                    <a href="Devendra_2026_IITG.pdf" target="_blank" class="p-4 rounded-2xl bg-teal-500/10 hover:bg-teal-500/20 text-teal-400 transition-all flex flex-col items-center gap-2 group border border-teal-500/20">
+                        <svg class="w-8 h-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        <span class="text-xs font-semibold">Resume</span>
+                    </a>
                 </div>
-            </section>
+            </div>
         </div>
 
-        <!-- Featured Projects Section -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold border-b-2 border-slate-800 inline-block pb-2 mb-8" data-aos="fade-in">Featured Projects</h2>
+        <!-- Middle Row: Terminal Skills & Live Experience -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <div class="grid md:grid-cols-2 gap-6">
-                
-                <!-- Project 1 (Fully Clickable) -->
-                <a href="https://github.com/devendrakumar2901/Cloud-Kitchen-Market-Intelligence" target="_blank" class="group block bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-blue-300 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up">
-                    <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Cloud Kitchen Market Intelligence</h3>
-                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">Analyzed a 35-restaurant market using MySQL and Python; built an 8-module Power BI dashboard.</p>
-                    <div class="flex gap-2 mb-4">
-                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">MySQL</span>
-                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">Python</span>
-                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">Power BI</span>
-                    </div>
-                    <div class="text-blue-600 font-semibold text-sm flex items-center">
-                        View Project & Code <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
-                    </div>
-                </a>
-
-                <!-- Project 2 (Fully Clickable) -->
-                <a href="https://github.com/devendrakumar2901/Credit-Card-Fraud-Detection-System" target="_blank" class="group block bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-emerald-300 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-emerald-600 transition-colors">Fraud Detection System</h3>
-                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">Built ML pipelines with Logistic Regression & Random Forest achieving 91.3% accuracy; deployed via Streamlit.</p>
-                    <div class="flex gap-2 mb-4">
-                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">Scikit-learn</span>
-                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">Streamlit</span>
-                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">SMOTE</span>
-                    </div>
-                    <div class="text-emerald-600 font-semibold text-sm flex items-center">
-                        View Project & Code <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
-                    </div>
-                </a>
-
-                <!-- Project 3 (Fully Clickable) -->
-                <a href="https://github.com/devendrakumar2901/Vendor-Sales-Analysis" target="_blank" class="group block bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-blue-300 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Vendor Sales Analysis</h3>
-                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">Developed optimized SQL queries on 50K+ records for ETL pipelines, reducing query processing time by 27%.</p>
-                    <div class="flex gap-2 mb-4">
-                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">SQL</span>
-                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">ETL</span>
-                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">EDA</span>
-                    </div>
-                    <div class="text-blue-600 font-semibold text-sm flex items-center">
-                        View Project & Code <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
-                    </div>
-                </a>
-
-                <!-- View More -->
-                <a href="https://github.com/devendrakumar2901?tab=repositories" target="_blank" class="group flex flex-col justify-center items-center bg-slate-50 border-2 border-dashed border-slate-300 p-6 rounded-2xl hover:bg-slate-100 hover:border-slate-400 transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="font-bold text-xl mb-2 text-slate-700">More Projects</h3>
-                    <p class="text-slate-500 font-medium group-hover:text-slate-800 transition-colors">View all on GitHub &rarr;</p>
-                </a>
-
+            <!-- Terminal Skills -->
+            <div class="bento-card p-6 flex flex-col h-full bg-[#0a0f16]">
+                <div class="flex items-center gap-2 mb-6 border-b border-white/10 pb-4">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="mono text-xs text-gray-500 ml-2">devendra@analytics:~$</span>
+                </div>
+                <div class="mono text-sm text-teal-400 mb-2">> load_skills()</div>
+                <div class="mono text-sm text-gray-300 leading-relaxed mb-4" id="terminal-text"></div>
+                <div class="mt-auto flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-gray-400 mono">SQL</span>
+                    <span class="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-gray-400 mono">Python</span>
+                    <span class="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-gray-400 mono">Power BI</span>
+                    <span class="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-gray-400 mono">A/B Testing</span>
+                </div>
             </div>
-        </section>
-    </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-8 text-center">
-        <p>&copy; 2026 Devendra Kumar. Built with HTML, Tailwind CSS & AOS.</p>
-    </footer>
+            <!-- Experience Highlights (Spans 2 columns) -->
+            <div class="bento-card md:col-span-2 p-8">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    Recent Experience
+                </h3>
+                
+                <div class="relative pl-6 border-l border-white/10">
+                    <div class="absolute w-3 h-3 bg-cyan-400 rounded-full -left-[6.5px] top-2 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></div>
+                    <h4 class="text-xl font-bold text-white">Business Analyst Intern</h4>
+                    <p class="text-cyan-400 font-medium text-sm mb-4">Pujakaro | May 2025 - July 2025</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4 max-w-2xl">
+                        Tasked with solving operational bottlenecks in an early-stage startup. Built a scalable reporting system tracking customer engagement across 5,000+ records. Cleaned and transformed messy datasets using SQL and Python to deploy cross-functional Power BI dashboards.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                            <div class="text-3xl font-black text-white mb-1 counter" data-target="36">0</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Reduction in Manual Reporting</div>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                            <div class="text-3xl font-black text-white mb-1">5K+</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Records Analyzed & Visualized</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- AOS Animation Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- Bottom Row: Projects Grid -->
+        <div class="mb-4 pt-6">
+            <h3 class="text-2xl font-bold text-white mb-6">Featured Deployments</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Project 1 -->
+                <a href="https://github.com/devendrakumar2901/Cloud-Kitchen-Market-Intelligence" target="_blank" class="bento-card p-6 flex flex-col group cursor-pointer">
+                    <div class="w-12 h-12 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">Cloud Kitchen Market Intelligence</h4>
+                    <p class="text-sm text-gray-400 mb-6 flex-grow">Designed an end-to-end analytics pipeline investigating a 35-restaurant market. Normalized 3 relational datasets in MySQL and built an interactive 8-module Power BI dashboard.</p>
+                    <div class="flex items-center text-teal-400 text-sm font-semibold mt-auto">
+                        View Repository <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="https://github.com/devendrakumar2901/Credit-Card-Fraud-Detection-System" target="_blank" class="bento-card p-6 flex flex-col group cursor-pointer relative overflow-hidden">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Fraud Detection System</h4>
+                    <p class="text-sm text-gray-400 mb-6 flex-grow">Deployed a real-time ML pipeline using Logistic Regression and Random Forest. Handled severe class imbalance via SMOTE to achieve 91.3% accuracy. Deployed on Streamlit.</p>
+                    <div class="flex items-center text-cyan-400 text-sm font-semibold mt-auto">
+                        View Repository <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="https://github.com/devendrakumar2901/Vendor-Sales-Analysis" target="_blank" class="bento-card p-6 flex flex-col group cursor-pointer">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Vendor Sales Analysis</h4>
+                    <p class="text-sm text-gray-400 mb-6 flex-grow">Merged sales, inventory, and vendor tables across 50K+ records. Optimized SQL queries with CTEs to reduce processing time by 27% and built KPI dashboards.</p>
+                    <div class="flex items-center text-purple-400 text-sm font-semibold mt-auto">
+                        View Repository <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
     <script>
-        AOS.init({ once: true, offset: 50 });
+        // Terminal Typing Effect
+        const text = "[*] Initializing analytics...\n[*] Loading dependencies: pandas, numpy, scikit-learn\n[*] Connecting to database (MySQL)...\n[*] Rendering Power BI visuals...\n> Status: READY.";
+        let i = 0;
+        const speed = 35;
+        const terminalEl = document.getElementById("terminal-text");
+        
+        function typeWriter() {
+            if (i < text.length) {
+                if(text.charAt(i) === '\n') {
+                    terminalEl.innerHTML += "<br>";
+                } else {
+                    terminalEl.innerHTML += text.charAt(i);
+                }
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                terminalEl.innerHTML += '<span class="cursor"></span>';
+            }
+        }
+        setTimeout(typeWriter, 500);
+
+        // Number Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / 50;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 40);
+                } else {
+                    counter.innerText = target + "%";
+                }
+            };
+            setTimeout(updateCount, 1000); // slight delay on load
+        });
     </script>
 </body>
 </html>
