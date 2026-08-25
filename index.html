@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devendra Kumar | Animated Portfolio</title>
+    <title>Devendra Kumar | Data Analyst Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
@@ -12,97 +12,121 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans overflow-x-hidden">
 
-    <!-- Animated Hero Section -->
-    <header class="bg-slate-900 text-white py-32 text-center relative overflow-hidden">
+    <!-- Hero Section -->
+    <header class="bg-slate-900 text-white py-24 text-center relative shadow-lg">
         <div class="relative z-10" data-aos="zoom-in" data-aos-duration="1000">
-            <h1 class="text-6xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">
-                Devendra Kumar
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
+                Devendra <span class="text-emerald-400">Kumar</span>
             </h1>
-            <p class="text-2xl text-slate-300 mb-8 font-light tracking-wide" data-aos="fade-up" data-aos-delay="300">Data & Business Analyst</p>
+            <p class="text-xl md:text-2xl text-slate-300 mb-8 font-light tracking-wide">Data & Business Analyst</p>
             
-            <div class="flex justify-center gap-6" data-aos="fade-up" data-aos-delay="600">
-                <a href="https://github.com/devendrakumar2901" target="_blank" class="bg-blue-600 hover:bg-blue-500 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(37,99,235,0.5)] px-8 py-3 rounded-full font-semibold transition-all duration-300">GitHub</a>
-                <a href="mailto:dkumar25604@gmail.com" class="bg-slate-700 hover:bg-slate-600 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(71,85,105,0.5)] px-8 py-3 rounded-full font-semibold transition-all duration-300">Email Me</a>
-                <a href="Devendra_2026_IITG.pdf" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(5,150,105,0.5)] px-8 py-3 rounded-full font-semibold transition-all duration-300">Resume</a>
+            <div class="flex flex-wrap justify-center gap-4 px-4">
+                <a href="https://github.com/devendrakumar2901" target="_blank" class="bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-full font-semibold transition-all hover:-translate-y-1 shadow-lg">GitHub</a>
+                <a href="mailto:dkumar25604@gmail.com" class="bg-slate-700 hover:bg-slate-600 px-8 py-3 rounded-full font-semibold transition-all hover:-translate-y-1 shadow-lg">Email Me</a>
+                <a href="Devendra_2026_IITG.pdf" target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-slate-900 px-8 py-3 rounded-full font-semibold transition-all hover:-translate-y-1 shadow-lg">Resume</a>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="max-w-4xl mx-auto p-6 mt-12">
+    <main class="max-w-5xl mx-auto p-6 mt-12">
         
-        <!-- Education & Skills -->
-        <section class="mb-16 bg-white p-8 rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="text-3xl font-bold border-b-2 border-emerald-500 inline-block pb-1 mb-6">Profile & Skills</h2>
-            <p class="mb-6 text-lg"><strong>Indian Institute of Technology Guwahati</strong> | B.Tech in Chemical Science and Technology (2022-2026)</p>
-            <div class="flex flex-wrap gap-3">
-                <span class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-default">Python (Pandas, NumPy)</span>
-                <span class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-default">SQL (MySQL)</span>
-                <span class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-default">Power BI</span>
-                <span class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-default">Machine Learning</span>
-                <span class="bg-slate-100 hover:bg-emerald-100 hover:text-emerald-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-default">A/B Testing</span>
-            </div>
-        </section>
+        <!-- Top Row: Profile & Experience -->
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+            
+            <!-- Profile & Skills -->
+            <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-lg transition-shadow" data-aos="fade-up">
+                <h2 class="text-2xl font-bold border-b-2 border-emerald-500 pb-2 mb-6 inline-block">Profile & Skills</h2>
+                <p class="mb-6 text-slate-700"><strong>IIT Guwahati</strong> | B.Tech in Chemical Science and Technology (2022-2026)</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-md text-sm font-semibold border border-blue-100">Python (Pandas, NumPy)</span>
+                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-md text-sm font-semibold border border-blue-100">SQL (MySQL)</span>
+                    <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-md text-sm font-semibold border border-emerald-100">Power BI</span>
+                    <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-md text-sm font-semibold border border-purple-100">Machine Learning</span>
+                    <span class="bg-amber-50 text-amber-700 px-3 py-1 rounded-md text-sm font-semibold border border-amber-100">A/B Testing</span>
+                </div>
+            </section>
 
-        <!-- Experience -->
-        <section class="mb-16 bg-white p-8 rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-shadow duration-300" data-aos="fade-right" data-aos-duration="800">
-            <h2 class="text-3xl font-bold border-b-2 border-blue-500 inline-block pb-1 mb-6">Experience</h2>
-            <div class="border-l-4 border-blue-500 pl-4 ml-2">
-                <h3 class="text-2xl font-semibold">Business Analyst Intern @ Pujakaro</h3>
-                <p class="text-sm text-emerald-600 font-medium mb-3 mt-1">May 2025 - July 2025</p>
-                <ul class="list-none text-slate-700 space-y-2">
-                    <li class="flex items-start"><span class="text-blue-500 mr-2">▹</span>Built a scalable reporting system to track customer engagement from 5,000+ records.</li>
-                    <li class="flex items-start"><span class="text-blue-500 mr-2">▹</span>Cleaned and transformed datasets using SQL, Excel, and Python to build Power BI dashboards.</li>
-                    <li class="flex items-start"><span class="text-blue-500 mr-2">▹</span>Reduced manual reporting by 36% and delivered actionable EDA insights.</li>
-                </ul>
-            </div>
-        </section>
+            <!-- Experience -->
+            <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-2 mb-6 inline-block">Experience</h2>
+                <div class="border-l-4 border-blue-500 pl-4">
+                    <h3 class="text-xl font-bold text-slate-800">Business Analyst Intern</h3>
+                    <p class="text-emerald-600 font-semibold mb-3">Pujakaro | May - July 2025</p>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                        <li>▹ Built scalable reporting tracking customer engagement for 5,000+ records.</li>
+                        <li>▹ Cleaned datasets via SQL/Python to build Power BI dashboards.</li>
+                        <li>▹ Reduced manual reporting by 36% & delivered EDA insights.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
 
-        <!-- Projects -->
+        <!-- Featured Projects Section -->
         <section class="mb-16">
-            <h2 class="text-3xl font-bold border-b-2 border-slate-800 inline-block pb-1 mb-8" data-aos="fade-in">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1 (Now a clickable link) -->
-                <a href="https://github.com/devendrakumar2901/Cloud-Kitchen-Market-Intelligence" target="_blank" class="block group border border-slate-200 p-6 rounded-xl bg-white shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="font-bold text-xl mb-2 group-hover:text-blue-600 transition-colors">Cloud Kitchen Market Intelligence</h3>
-                    <p class="text-slate-600 mb-4 leading-relaxed">Analyzed a 35-restaurant market using MySQL and Python; built an 8-module Power BI dashboard.</p>
-                    <p class="text-emerald-600 font-semibold text-sm mt-2 flex items-center">View Project <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span></p>
-                </a>
+            <h2 class="text-3xl font-bold border-b-2 border-slate-800 inline-block pb-2 mb-8" data-aos="fade-in">Featured Projects</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
                 
-                <!-- Project 2 (Now a clickable link) -->
-                <a href="https://github.com/devendrakumar2901/Credit-Card-Fraud-Detection-System" target="_blank" class="block group border border-slate-200 p-6 rounded-xl bg-white shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="font-bold text-xl mb-2 group-hover:text-blue-600 transition-colors">Fraud Detection System</h3>
-                    <p class="text-slate-600 mb-4 leading-relaxed">Developed ML pipelines achieving 91.3% accuracy; deployed via Streamlit.</p>
-                    <p class="text-emerald-600 font-semibold text-sm mt-2 flex items-center">View Project <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span></p>
+                <!-- Project 1 (Fully Clickable) -->
+                <a href="https://github.com/devendrakumar2901/Cloud-Kitchen-Market-Intelligence" target="_blank" class="group block bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-blue-300 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Cloud Kitchen Market Intelligence</h3>
+                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">Analyzed a 35-restaurant market using MySQL and Python; built an 8-module Power BI dashboard.</p>
+                    <div class="flex gap-2 mb-4">
+                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">MySQL</span>
+                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">Python</span>
+                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">Power BI</span>
+                    </div>
+                    <div class="text-blue-600 font-semibold text-sm flex items-center">
+                        View Project & Code <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </div>
                 </a>
-                
-                <!-- Project 3 (Now a clickable link) -->
-                <a href="https://github.com/devendrakumar2901/Vendor-Sales-Analysis" target="_blank" class="block group border border-slate-200 p-6 rounded-xl bg-white shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="font-bold text-xl mb-2 group-hover:text-blue-600 transition-colors">Vendor Sales Analysis</h3>
-                    <p class="text-slate-600 mb-4 leading-relaxed">Optimized SQL queries on 50K+ records, reducing query processing time by 27%.</p>
-                    <p class="text-emerald-600 font-semibold text-sm mt-2 flex items-center">View Project <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span></p>
+
+                <!-- Project 2 (Fully Clickable) -->
+                <a href="https://github.com/devendrakumar2901/Credit-Card-Fraud-Detection-System" target="_blank" class="group block bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-emerald-300 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-emerald-600 transition-colors">Fraud Detection System</h3>
+                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">Built ML pipelines with Logistic Regression & Random Forest achieving 91.3% accuracy; deployed via Streamlit.</p>
+                    <div class="flex gap-2 mb-4">
+                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">Scikit-learn</span>
+                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">Streamlit</span>
+                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">SMOTE</span>
+                    </div>
+                    <div class="text-emerald-600 font-semibold text-sm flex items-center">
+                        View Project & Code <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </div>
                 </a>
-                
+
+                <!-- Project 3 (Fully Clickable) -->
+                <a href="https://github.com/devendrakumar2901/Vendor-Sales-Analysis" target="_blank" class="group block bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-blue-300 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">Vendor Sales Analysis</h3>
+                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">Developed optimized SQL queries on 50K+ records for ETL pipelines, reducing query processing time by 27%.</p>
+                    <div class="flex gap-2 mb-4">
+                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">SQL</span>
+                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">ETL</span>
+                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">EDA</span>
+                    </div>
+                    <div class="text-blue-600 font-semibold text-sm flex items-center">
+                        View Project & Code <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </div>
+                </a>
+
                 <!-- View More -->
-                <a href="https://github.com/devendrakumar2901?tab=repositories" target="_blank" class="block border-2 border-dashed border-slate-300 p-6 rounded-xl bg-slate-50 flex flex-col justify-center items-center text-center hover:bg-slate-100 transition-colors duration-300 cursor-pointer group" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="font-bold text-xl mb-2 text-slate-800">More Projects</h3>
-                    <p class="text-blue-600 font-medium group-hover:underline">View all on GitHub &rarr;</p>
+                <a href="https://github.com/devendrakumar2901?tab=repositories" target="_blank" class="group flex flex-col justify-center items-center bg-slate-50 border-2 border-dashed border-slate-300 p-6 rounded-2xl hover:bg-slate-100 hover:border-slate-400 transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="font-bold text-xl mb-2 text-slate-700">More Projects</h3>
+                    <p class="text-slate-500 font-medium group-hover:text-slate-800 transition-colors">View all on GitHub &rarr;</p>
                 </a>
+
             </div>
         </section>
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-8 text-center border-t border-slate-800">
-        <p>&copy; 2026 Devendra Kumar. Built with HTML, Tailwind & AOS.</p>
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center">
+        <p>&copy; 2026 Devendra Kumar. Built with HTML, Tailwind CSS & AOS.</p>
     </footer>
 
     <!-- AOS Animation Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            offset: 50,
-        });
+        AOS.init({ once: true, offset: 50 });
     </script>
 </body>
 </html>
