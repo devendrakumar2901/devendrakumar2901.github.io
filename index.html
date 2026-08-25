@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devendra Kumar | Animated Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        /* Smooth scrolling for the whole page */
         html { scroll-behavior: smooth; }
     </style>
 </head>
@@ -64,29 +62,32 @@
         <section class="mb-16">
             <h2 class="text-3xl font-bold border-b-2 border-slate-800 inline-block pb-1 mb-8" data-aos="fade-in">Featured Projects</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1 -->
-                <div class="group border border-slate-200 p-6 rounded-xl bg-white shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <!-- Project 1 (Now a clickable link) -->
+                <a href="https://github.com/devendrakumar2901/Cloud-Kitchen-Market-Intelligence" target="_blank" class="block group border border-slate-200 p-6 rounded-xl bg-white shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="font-bold text-xl mb-2 group-hover:text-blue-600 transition-colors">Cloud Kitchen Market Intelligence</h3>
                     <p class="text-slate-600 mb-4 leading-relaxed">Analyzed a 35-restaurant market using MySQL and Python; built an 8-module Power BI dashboard.</p>
-                </div>
+                    <p class="text-emerald-600 font-semibold text-sm mt-2 flex items-center">View Project <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span></p>
+                </a>
                 
-                <!-- Project 2 -->
-                <div class="group border border-slate-200 p-6 rounded-xl bg-white shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <!-- Project 2 (Now a clickable link) -->
+                <a href="https://github.com/devendrakumar2901/Credit-Card-Fraud-Detection-System" target="_blank" class="block group border border-slate-200 p-6 rounded-xl bg-white shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="font-bold text-xl mb-2 group-hover:text-blue-600 transition-colors">Fraud Detection System</h3>
                     <p class="text-slate-600 mb-4 leading-relaxed">Developed ML pipelines achieving 91.3% accuracy; deployed via Streamlit.</p>
-                </div>
+                    <p class="text-emerald-600 font-semibold text-sm mt-2 flex items-center">View Project <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span></p>
+                </a>
                 
-                <!-- Project 3 -->
-                <div class="group border border-slate-200 p-6 rounded-xl bg-white shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                <!-- Project 3 (Now a clickable link) -->
+                <a href="https://github.com/devendrakumar2901/Vendor-Sales-Analysis" target="_blank" class="block group border border-slate-200 p-6 rounded-xl bg-white shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
                     <h3 class="font-bold text-xl mb-2 group-hover:text-blue-600 transition-colors">Vendor Sales Analysis</h3>
                     <p class="text-slate-600 mb-4 leading-relaxed">Optimized SQL queries on 50K+ records, reducing query processing time by 27%.</p>
-                </div>
+                    <p class="text-emerald-600 font-semibold text-sm mt-2 flex items-center">View Project <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span></p>
+                </a>
                 
                 <!-- View More -->
-                <div class="border-2 border-dashed border-slate-300 p-6 rounded-xl bg-slate-50 flex flex-col justify-center items-center text-center hover:bg-slate-100 transition-colors duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="400" onclick="window.open('https://github.com/devendrakumar2901?tab=repositories', '_blank')">
+                <a href="https://github.com/devendrakumar2901?tab=repositories" target="_blank" class="block border-2 border-dashed border-slate-300 p-6 rounded-xl bg-slate-50 flex flex-col justify-center items-center text-center hover:bg-slate-100 transition-colors duration-300 cursor-pointer group" data-aos="fade-up" data-aos-delay="400">
                     <h3 class="font-bold text-xl mb-2 text-slate-800">More Projects</h3>
-                    <p class="text-blue-600 font-medium">View all on GitHub &rarr;</p>
-                </div>
+                    <p class="text-blue-600 font-medium group-hover:underline">View all on GitHub &rarr;</p>
+                </a>
             </div>
         </section>
     </main>
@@ -99,8 +100,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            once: true, /* whether animation should happen only once - while scrolling down */
-            offset: 50, /* offset (in px) from the original trigger point */
+            once: true,
+            offset: 50,
         });
     </script>
 </body>
